@@ -1,4 +1,3 @@
-
 <?php
 class Request
 {
@@ -35,11 +34,18 @@ class Request
   {
     if(count(self::$query)>0)
     {
-      return self::$query;
-    }
+        if((count(self::$query)%2)==0)
+        {
+          return self::$query;
+        }
+        else
+        {
+          echo "ERROR 0";
+        }
+    } 
     else
     {
-      echo ('ERROR!');
+        echo "ERROR 0";
     }
   }
 
